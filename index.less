@@ -1,0 +1,126 @@
+@greenColor: #1B5C23;
+@redColor: #FF0000;
+
+@minWidth: 750px;
+
+@paddingwidth:((@minWidth - 17*30px)/16)/@minWidth * 100;
+
+.container {
+    min-width: @minWidth;
+    height: 150px;
+    margin-top: 20px;
+    .stationNumber {
+        background: @redColor;
+        width: 185px;
+        height: 120px;
+        font-size: 80px;
+        text-align: center;
+        line-height: 120px;
+        color: #fff;
+        float: left;
+        margin-left: 2px;
+    }
+    .current {
+        float: left;
+        width: 270px;
+        margin-left: 90px;
+        padding: 10px;
+        .stationName {
+            font-size: 25px;
+            position: relative;
+            color: @greenColor;
+            .start,
+            .end {
+                letter-spacing: 6px;
+            }
+            .startletter {
+                position: absolute;
+                top: 35px;
+                left: 0px;
+                font-size: 16px;
+            }
+            .endletter {
+                position: absolute;
+                left: 170px;
+                font-size: 15px;
+                top: 35px;
+            }
+        }
+        .curr-stationName {
+            padding: 0;
+            margin: 0;
+            margin-top: 55px;
+            font-size: 20px;
+        }
+    }
+    .time {
+        position: absolute;
+        top: 150px;
+        left: 20px;
+    }
+}
+
+.allStation {
+    clear: both;
+    height: 200px;
+    min-width: @minWidth;
+    background: @greenColor;
+    ul {
+        padding: 15px;
+        display: block;
+        list-style: none;
+        height: 100%;
+        li {
+            float: left;
+            font-size: 20px;
+            word-wrap: break-word;
+            width: 30px;
+            padding: @paddingwidth;
+            color: #fff;
+        }
+        .letter4 {
+            line-height: 36px;
+        }
+        .letter3 {
+            line-height: 50px;
+        }
+        .letter5 {
+            line-height: 28px;
+        }
+        .letter2 {
+            line-height: 84px;
+        }
+    }
+}
+
+
+.last {
+    width: 100%;
+    min-width: 640px;
+    .line {
+        width: 90%;
+        background: #FF0000;
+        height: 10px;
+        margin-left: 2%;
+        display: inline-block;
+        .arrow {
+            display: inline-block;
+            transform: rotate(109deg);
+            width: 0;
+            margin-top: -25px;
+            margin-left: 99%;
+            background: transparent;
+            border-top: 66px solid transparent;
+            border-left: 23px solid #FF0000;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+    }
+    .info {
+        min-width: 640px;
+        height: 30px;
+        p {
+            text-align: center;
+        }
+    }
+}
